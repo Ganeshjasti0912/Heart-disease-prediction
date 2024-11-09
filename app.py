@@ -9,6 +9,9 @@ from cancer import cancer_pred
 from diabetes import diabetes_pred
 from stroke import stroke_pred
 from kidney import kidney_pred
+import os
+port = int(os.environ.get("PORT", 10000))  # Default to 10000 if PORT is not set
+streamlit run app.py --server.port $port --server.headless true
 
 def main():
 
